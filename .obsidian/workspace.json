@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "19b36eeb17297cbf",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed9fcaf96f11c015",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b81809c9ccc8d501",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学建模/评价类算法/TOPSIS优劣解距离法.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "TOPSIS优劣解距离法"
+            }
+          }
+        ]
+      },
+      {
+        "id": "19a81a43232a23c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8f73d438bbab45b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数学建模/评价类算法/TOPSIS优劣解距离法.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "TOPSIS优劣解距离法"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7bebcffee724ced6",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebd9576e738ff6d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54317247ada92fcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "46f88d0765522ed0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "78f6e088aa04a215",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200.5
+  },
+  "right": {
+    "id": "4dcb5a562b45791b",
+    "type": "split",
+    "children": [
+      {
+        "id": "3fd8197569335733",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6d41ee838b0e3d4b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "C++/STL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "STL 的反向链接列表"
+            }
+          },
+          {
+            "id": "517c3b066f5c9b84",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "欢迎.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "欢迎 的出链列表"
+            }
+          },
+          {
+            "id": "3102cc75d2eff717",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "9a52b5f023b4da5a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "欢迎.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "欢迎 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "command-palette:打开命令面板": false,
+      "templates:插入模板": false,
+      "daily-notes:打开/创建今天的日记": true,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": true,
+      "canvas:新建白板": true
+    }
+  },
+  "active": "b81809c9ccc8d501",
+  "lastOpenFiles": [
+    "数学建模/评价类算法/熵权法.md",
+    "数学建模/评价类算法/评价类算法概述.md",
+    "数学建模/评价类算法/模糊综合评价.md",
+    "数学建模/评价类算法/层次分析法.md",
+    "数学建模/评价类算法/TOPSIS优劣解距离法.md",
+    "数学建模/评价类算法/image/31.png",
+    "数学建模/评价类算法/image/30.png",
+    "数学建模/评价类算法/image/29.png",
+    "数学建模/评价类算法/image/28.png",
+    "数学建模/评价类算法/image/27.png",
+    "数学建模/评价类算法/image/24.png",
+    "数学建模/评价类算法/image/25.png",
+    "数学建模/评价类算法/image/26.png",
+    "数学建模/评价类算法/image/23.png",
+    "数学建模/评价类算法/image/22.png",
+    "数学建模/评价类算法/image",
+    "数学建模/image",
+    "数学建模/新建文件夹",
+    "数学建模/评价类算法",
+    "C++/STL.md",
+    "数学建模",
+    "未命名.canvas",
+    "2025-04-04.md",
+    "欢迎.md",
+    "C++"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-monochrome-topaz",
+  "shimmering-focus@@no-mouse-hovers": true,
+  "shimmering-focus@@use-relative-line-numbers": true,
+  "shimmering-focus@@vim-active-visual-line": true,
+  "shimmering-focus@@normal-tab-bar": false,
+  "shimmering-focus@@hide-vault-switcher-and-settings": false,
+  "shimmering-focus@@show-sidebar-header-buttons": true,
+  "shimmering-focus@@show-tab-list-button": true,
+  "shimmering-focus@@show-new-tab-button": true,
+  "shimmering-focus@@normal-header-bar": true,
+  "shimmering-focus@@show-sidebar-toggle-buttons": true,
+  "shimmering-focus@@show-close-buttons": true,
+  "shimmering-focus@@hide-signature-icon": false,
+  "shimmering-focus@@hide-languagetool-status-bar": false,
+  "shimmering-focus@@hide-backlinks-status-bar": false,
+  "shimmering-focus@@hide-properties-in-statusbar": false,
+  "shimmering-focus@@overlaying-right-sidebar": false,
+  "shimmering-focus@@hidden-sidebars-hidden-statusbar": false,
+  "shimmering-focus@@notices-at-bottom-right": false
+}
