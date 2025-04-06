@@ -30,25 +30,27 @@ git config --global user.email "EMAIL"
 ## 基础命令
 ```bash
 git init
-#
+# 初始化库
 git pull origin main
-#
+# 从远程主分支拉取至本地主分支
 git push origin main
-#
+# 将本地主分支推送至远程主分支
 git add FILENAME
-#
+# 将文件FILENAME加入跟踪列表
 git commit -m "NOTATION"
-#
+# 将修改提交至分支并注释
 git diff FILENAME
-#
+# 跟踪文件变化
 git reset --hard HEAD^
-#
+# 将版本回退至一次提交前
+git reset --hard HEAD^^
+# 将版本回退至两次提交前
 git reset --hard HEAD~100
-#
+# 将版本回退至100次提交前
 git reflog
-#
+# 显示历史版本号(包括从某版本往回退后该版本的版本号)
 git reset --hard RELEASE
-#
+# 将版本回退至该版本号
 ```
 ## 工作区与暂存区
 工作区: **文件管理器**中的目录和文件.
