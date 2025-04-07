@@ -1,0 +1,100 @@
+syntax on
+filetype plugin on
+filetype indent on
+" set guifont=Source_Code_Pro_Medium:h14:i
+set guifont=Consolas:h16
+color wwdc16
+set autoread
+set nocompatible
+set backspace=2
+set ts=4
+set sts=4
+set sw=4
+set cin
+set smartindent
+set go=
+set nu
+set mouse=a
+set clipboard=unnamed
+set autoindent
+set nobackup
+set noundofile
+" set noswapfile
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+language messages zh_CN.utf-8
+
+au GUIEnter * call libcallnr("vimtweak64.dll", "SetAlpha", 250)
+" if executable("vimtweak.dll") 
+" autocmd guienter * call libcallnr("vimtweak","SetAlpha",222) 
+" endif
+
+func! Add()
+     call setline(1,"#include <bits/stdc++.h>")
+     call append(line("."), "") 
+     call append(line(".")+1, "using namespace std;")
+     call append(line(".")+2, "typedef long long ll;")
+     call append(line(".")+3, "typedef double lf;")
+     call append(line(".")+4, "")
+     call append(line(".")+5, "int chkmax(int& a, int b) {return a < b ? a = b, 1 : 0;}")
+     call append(line(".")+6, "int chkmin(int& a, int b) {return a > b ? a = b, 1 : 0;}")
+     call append(line(".")+7, "")
+     call append(line(".")+8, "int __read() {")
+     call append(line(".")+9, "	int v = 0, b = 1; char c = getchar();")
+     call append(line(".")+10, "    for(; !isdigit(c); c = getchar()) if(c == '-') b = -1;") 
+     call append(line(".")+11, "    for(; isdigit(c); c = getchar()) v = v * 10 + (c ^ '0');") 
+     call append(line(".")+12, "    return v * b;") 
+     call append(line(".")+13, "}") 
+     call append(line(".")+14, "") 
+     call append(line(".")+15, "int main() {") 
+     call append(line(".")+16, "#ifndef ONLINE_JUDGE")
+	 call append(line(".")+17, "	freopen(\".in\", \"r\", stdin);")
+	 call append(line(".")+18, "	freopen(\".out\", \"w\", stdout);")
+	 call append(line(".")+19, "#endif")
+     call append(line(".")+20, "")
+     call append(line(".")+21, "    return 0;") 
+     call append(line(".")+22, "}") 
+endfunc
+
+map<F9> <Esc>:call Compile() <CR>
+imap<F9> <Esc>:call Compile() <CR>
+func! Compile()
+	exec "w | !g++ % -o %< -Wall -g -O2"
+endfunc
+
+func! Run()
+	exec "!%<"
+endfunc
+
+map<F10> <Esc>:w <CR>
+imap<F10> <Esc>:w <CR>
+
+map<F5> <Esc>:call Open() <CR>
+imap<F5> <Esc> <CR>
+func! Open()
+	exec "vsp %<.out | sp %<.in"
+endfunc
+
+map<F6> <Esc>:call O() <CR>
+imap<F6> <Esc>:call O() <CR>
+func! O()
+	exec "w | !g++ % -o %< && %<"
+endfunc
+
+map<F4> :call Add() <CR>
+imap<F4> <Esc> <CR>
+
+map<F7> <Esc> <CR>
+imap<F7> <Esc> <CR>
+map<F8> <Esc> <CR>
+imap<F8> <Esc> <CR>
+map<F11> <Esc> <CR>
+imap<F11> <Esc> <CR>
+
+" source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+exec 'cd ' . fnameescape('C:\Users\abc0x7f\Desktop\Memories\PROGRAM')

@@ -37,14 +37,14 @@ using namespace std;
 int main() {
 	//数组访问
 	vector<int> arr;
-	for(int i = 0; i < 5; i ++)
+	for(int i = 0; i < 5; i++)
 		vector.push_back(i);
 	cout << arr[0] << endl;
 	//迭代器访问 类似指针
 	vector<TYPENAME>::iterator VARNAME;
 	vector<int>::iterator it;
 	it = arr.begin();
-	for(int i = 0; i < arr.size(); i ++)
+	for(int i = 0; i < arr.size(); i++)
 		cout << it[i] << endl;
 	return 0;
 }
@@ -52,16 +52,16 @@ int main() {
 也可写成
 ```cpp
 vector<int>::iterator it = arr.begin();
-for(int i = 0; i < arr.size(); i ++)
+for(int i = 0; i < arr.size(); i++)
 	cout << *(it + i) << endl;
 	//it[i] <=> *(it + i)
 ```
 或者
 ```cpp
-for(auto i = it.begin(); i != it.end(); i ++)
+for(auto i = it.begin(); i != it.end(); i++)
 	cout << *it << endl;
 //类似于遍历字符串
-for(int i = 0; str[i] != '\0'; i ++)
+for(int i = 0; str[i] != '\0'; i++)
 	cout << str[i] << endl;
 ```
 ### 常用函数
@@ -131,7 +131,7 @@ it = s.begin();
 此时可以通过\*it访问set内元素
 注意除了vector和string之外的STL容器都不支持*(it+i)的访问方式
 ```cpp
-for(auto it = s.begin(); it != s.end(); it ++)
+for(auto it = s.begin(); it != s.end(); it++)
 	cout << *it << endl;
 ```
 ### 常用函数
@@ -146,7 +146,7 @@ s.insert('A');
 如果未找到对应值的元素则返回end()
 ```cpp
 set<int> s;
-for(int i = 1; i <= 3; i ++) s.insert(i + 10);
+for(int i = 1; i <= 3; i++) s.insert(i + 10);
 set<int>::iterator it = s.find(12);
 cout << *it << " " << *(s.find(13)) << endl;
 ```
@@ -169,7 +169,7 @@ s.erase(100); //删除值为100的元素
 即范围为\[iteratorBegin,iteratorEnd\)
 ```cpp
 set<int> s;
-for(int i = 0; i < 10; i ++) s.insert(i);
+for(int i = 0; i < 10; i++) s.insert(i);
 auto it = s.find(5);
 s.erase(it, s.end());
 s.write();

@@ -4,37 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "ed9fcaf96f11c015",
+        "id": "e1462450c7322e02",
         "type": "tabs",
         "children": [
           {
-            "id": "b81809c9ccc8d501",
+            "id": "02038e9f4966437b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/Git.md",
+                "file": "数学建模/LaTex初步.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "LaTex初步"
             }
           }
         ]
       },
       {
-        "id": "2c5da7e04f64e630",
+        "id": "893ca1919d3d0c50",
         "type": "tabs",
         "children": [
           {
-            "id": "c6730c095070129e",
+            "id": "0ebd261178cf7b10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "数学建模/LaTex初步.md",
+                "mode": "preview",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "LaTex初步"
             }
           }
         ]
@@ -177,17 +181,23 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "command-palette:打开命令面板": false,
-      "templates:插入模板": false,
-      "daily-notes:打开/创建今天的日记": true,
       "switcher:打开快速切换": false,
-      "graph:查看关系图谱": true,
-      "canvas:新建白板": true
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "b81809c9ccc8d501",
+  "active": "02038e9f4966437b",
   "lastOpenFiles": [
+    "C++/STL.md",
+    "数学建模/LaTex初步.md",
     "C++/Git.md",
+    "环境/env.md",
+    "游戏/heartstone.md",
+    "环境/java_env.pdf",
+    "heartstone.md",
     "数学建模/LaTex.md",
     "数学建模/评价类算法/TOPSIS优劣解距离法.md",
     "数学建模/评价类算法/熵权法.md",
@@ -208,7 +218,6 @@
     "数学建模/image",
     "数学建模/新建文件夹",
     "数学建模/评价类算法",
-    "C++/STL.md",
     "数学建模",
     "未命名.canvas",
     "2025-04-04.md",
