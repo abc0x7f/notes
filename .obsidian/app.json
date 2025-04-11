@@ -3,5 +3,12 @@
   "spellcheck": false,
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
-  "vimMode": true
+  "vimMode": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": true,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
