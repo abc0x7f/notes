@@ -144,10 +144,10 @@ git remote -v
 ```
 ## 推送分支
 ```bash
-git push origin main
+git push origin main(dev)
 ```
 Git会把该分支推送到远程库**对应的**远程分支上.
-## 抓取分支
+## 抓取分支 (未实验)
 当我要推送的本地库和远程库有冲突时(远程库被他人修改):
 ```bash
 git branch --set-upstream dev origin/dev
@@ -158,4 +158,16 @@ git pull
 git add .
 git commit -m "NOTATION"
 git push origin main
+```
+
+## 抓取分支 (推荐)
+当我要推送的本地库和远程库有冲突时(远程库被他人修改):
+```bash
+git add .
+git commit -m "NOTATION"
+# 将本地修改提交
+git pull --rebase origin main
+# 变基合并远程修改至本地,根节点为本地最新提交
+git push origin main
+# 推送至远程仓库
 ```
