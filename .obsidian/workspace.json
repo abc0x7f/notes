@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/C++基础知识汇总.md",
+                "file": "C++/C++的模板与思路-修改1.4.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "C++基础知识汇总"
+              "title": "C++的模板与思路-修改1.4"
             }
           }
         ]
@@ -35,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/C++基础知识汇总.md",
+                "file": "C++/C++的模板与思路-修改1.4.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C++基础知识汇总"
+              "title": "C++的模板与思路-修改1.4"
             }
           }
         ]
@@ -191,12 +191,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9b497fe37fadd7c6",
+  "active": "273f6abeccfb00ff",
   "lastOpenFiles": [
     "C++/指针与引用.md",
+    "C++/C++的模板与思路-修改1.4.md",
     "C++/C++基础知识汇总.md",
     "C++/Git.md",
-    "C++/C++的模板与思路-修改1.3.md",
     "C++/重载运算符.md",
     "C++/STL/STL关联式容器.md",
     "C++/STL/STL容器适配器.md",
