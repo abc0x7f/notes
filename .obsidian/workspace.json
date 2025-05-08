@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/C++的模板与思路-修改1.4.md",
+                "file": "函数.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "C++的模板与思路-修改1.4"
+              "title": "函数"
             }
           }
         ]
@@ -35,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/C++的模板与思路-修改1.4.md",
+                "file": "函数.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C++的模板与思路-修改1.4"
+              "title": "函数"
             }
           }
         ]
@@ -193,13 +193,19 @@
   },
   "active": "273f6abeccfb00ff",
   "lastOpenFiles": [
-    "C++/指针与引用.md",
-    "C++/C++的模板与思路-修改1.4.md",
+    "关键字.md",
     "C++/C++基础知识汇总.md",
-    "C++/Git.md",
+    "C++/高级数据结构.md",
+    "C++/常量.md",
+    "函数.md",
+    "C++/C++的模板与思路-修改1.4.md",
     "C++/重载运算符.md",
+    "C++/指针与引用.md",
     "C++/STL/STL关联式容器.md",
     "C++/STL/STL容器适配器.md",
+    "C++/STL/STL无序关联容器 (C++11).md",
+    "C++/STL/STL序列式容器.md",
+    "C++/Git.md",
     "注 1.md",
     "C++/C1/3.png",
     "C++/C1/2.png",
@@ -233,8 +239,6 @@
     "数学建模/新建文件夹",
     "数学建模/评价类算法",
     "数学建模",
-    "未命名.canvas",
-    "2025-04-04.md",
-    "欢迎.md"
+    "未命名.canvas"
   ]
 }
