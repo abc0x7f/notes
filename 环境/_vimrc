@@ -1,32 +1,42 @@
-syntax on
-filetype plugin on
-filetype indent on
+syntax on " 语法高亮
+filetype plugin on " 插件
+filetype indent on " 缩进
 " set guifont=Source_Code_Pro_Medium:h14:i
-set guifont=Consolas:h16
-color wwdc16
-set autoread
-set nocompatible
-set backspace=2
-set ts=4
-set sts=4
-set sw=4
-set cin
-set smartindent
-set go=
-set nu
-set mouse=a
-set clipboard=unnamed
-set autoindent
-set nobackup
-set noundofile
-" set noswapfile
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,gb18030,gbk,gb2312,cp936
-set termencoding=utf-8
-language messages zh_CN.utf-8
+set guifont=Consolas:h15 " 字体
+set guifontwide=Fixedsys:h15
+color wwdc16 " 主题
 
-au GUIEnter * call libcallnr("vimtweak64.dll", "SetAlpha", 250)
+" source $VIMRUNTIME/vimrc_example.vim
+exec 'cd ' . fnameescape('C:\Users\l\Desktop\PROGRAM')
+" 工作目录
+source $VIMRUNTIME/mswin.vim
+behave mswin " windows模式
+set go= " gui模式隐藏菜单栏
+set nu " 显示行号
+set nocompatible "启用vim模式而非vi
+set mouse=a " 打开鼠标功能
+set backspace=2 " 启用backspace
+
+set ts=4 " 缩进
+set sts=4 " 缩进
+set sw=4 " 缩进空格数
+set cin " c语言缩进模式
+set autoindent " 自动缩进
+set smartindent " 智能缩进
+
+set autoread " 自动读入vim外修改
+set clipboard=unnamed " 与外部剪切板链接
+set nobackup " 无备份文件
+set noundofile " 无永久性可撤回文件
+" set noswapfile " 无交换文件
+
+set encoding=cp936 " 编码格式
+set fileencoding=cp936 " 默认文件读取编码
+set fileencodings=ucs-bom,utf-8,gb18030,gbk,gb2312,cp936 " 智能辨认编码
+set termencoding=cp936 " 终端输出编码,gvim无效
+language messages zh_CN.utf-8 " 内部显示编码
+
+" au GUIEnter * call libcallnr("vimtweak64.dll", "SetAlpha", 250) " 透明度(需插件)
 " if executable("vimtweak.dll") 
 " autocmd guienter * call libcallnr("vimtweak","SetAlpha",222) 
 " endif
@@ -38,34 +48,52 @@ func! Add()
      call append(line(".")+2, "typedef long long ll;")
      call append(line(".")+3, "typedef double lf;")
      call append(line(".")+4, "")
-     call append(line(".")+5, "int chkmax(int& a, int b) {return a < b ? a = b, 1 : 0;}")
-     call append(line(".")+6, "int chkmin(int& a, int b) {return a > b ? a = b, 1 : 0;}")
+     call append(line(".")+5, "template <typename T> T chkmax(T &a, T b) {return a < b ? a = b, 1 : 0;}")
+     call append(line(".")+6, "template <typename T> T chkmin(T &a, T b) {return a > b ? a = b, 1 : 0;}")
      call append(line(".")+7, "")
-     call append(line(".")+8, "int __read() {")
-     call append(line(".")+9, "	int v = 0, b = 1; char c = getchar();")
-     call append(line(".")+10, "    for(; !isdigit(c); c = getchar()) if(c == '-') b = -1;") 
-     call append(line(".")+11, "    for(; isdigit(c); c = getchar()) v = v * 10 + (c ^ '0');") 
-     call append(line(".")+12, "    return v * b;") 
-     call append(line(".")+13, "}") 
-     call append(line(".")+14, "") 
-     call append(line(".")+15, "int main() {") 
-     call append(line(".")+16, "#ifndef ONLINE_JUDGE")
-	 call append(line(".")+17, "	freopen(\".in\", \"r\", stdin);")
-	 call append(line(".")+18, "	freopen(\".out\", \"w\", stdout);")
-	 call append(line(".")+19, "#endif")
-     call append(line(".")+20, "")
-     call append(line(".")+21, "    return 0;") 
-     call append(line(".")+22, "}") 
+     call append(line(".")+8, "template <typename T = int> T read() {")
+     call append(line(".")+9, "	T v = 0; bool b = 1; char c = getchar();")
+     call append(line(".")+10, "    for (; !isdigit(c); c = getchar()) if (c == '-') b = 0;") 
+     call append(line(".")+11, "    for (; isdigit(c); c = getchar()) v = (v << 3) + (v << 1) + (c ^ '0');") 
+     call append(line(".")+12, "    return b ? v : -v;") 
+     call append(line(".")+13, "}")
+	 call append(line(".")+14, "") 
+	 call append(line(".")+15, "template <typename T> T read(T &x) {return x = read<T>();}")
+	 call append(line(".")+16, "ll (*readll)() = read<ll>;") 
+     call append(line(".")+17, "") 
+     call append(line(".")+18, "int main() {") 
+     call append(line(".")+19, "#ifndef ONLINE_JUDGE")
+	 call append(line(".")+20, "	freopen(\".in\", \"r\", stdin);")
+	 call append(line(".")+21, "	freopen(\".out\", \"w\", stdout);")
+	 call append(line(".")+22, "#endif")
+     call append(line(".")+23, "")
+     call append(line(".")+24, "    return 0;") 
+     call append(line(".")+25, "}") 
 endfunc
 
 map<F9> <Esc>:call Compile() <CR>
 imap<F9> <Esc>:call Compile() <CR>
-func! Compile()
-	exec "w | !g++ % -o %< -Wall -g -O2"
+func! Compile() " save and compile and run
+	if &filetype == 'cpp' 
+		exec "w | !g++ -g % -o %< -Wall -O2 -std=c++17"
+	endif
+	if &filetype == 'c'
+		exec "w | !gcc -g % -o %< -O2 -Wall"
+	endif
+	if &filetype == 'python'
+		exec "w |  !python3 %"
+	endif
+	if &filetype =='java'
+		exec "w | !javac % && java %<"
+	endif
+	redraw!
 endfunc
 
-func! Run()
-	exec "!%<"
+func! Run() " run
+	if (&filetype == 'cpp' || &filetype == 'c')
+		exec "!%<"
+	endif
+	redraw!
 endfunc
 
 map<F10> <Esc>:w <CR>
@@ -73,14 +101,30 @@ imap<F10> <Esc>:w <CR>
 
 map<F5> <Esc>:call Open() <CR>
 imap<F5> <Esc> <CR>
-func! Open()
-	exec "vsp %<.out | sp %<.in"
+func! Open() " openfile *.in and *.out
+	if (&filetype == 'cpp' || &filetype == 'c')
+		exec "vsp %<.out | sp %<.in"
+	endif
+	redraw!
 endfunc
 
 map<F6> <Esc>:call O() <CR>
 imap<F6> <Esc>:call O() <CR>
-func! O()
-	exec "w | !g++ % -o %< && %<"
+func! O() " save and compile
+	exec "w"
+	if &filetype == 'cpp'
+		exec "!g++ -g % -o %< -O2 -Wall -std=c++17 && %<"
+	endif
+	if &filetype == 'c'
+		exec "!gcc -g % -o %< -O2 -Wall && %<"
+	endif
+	if &filetype == 'python'
+		exec "!python3 %"
+	endif
+	if &filetype == 'java'
+		exec "!javac % && java %<"
+	endif
+	redraw!
 endfunc
 
 map<F4> :call Add() <CR>
@@ -92,9 +136,3 @@ map<F8> <Esc> <CR>
 imap<F8> <Esc> <CR>
 map<F11> <Esc> <CR>
 imap<F11> <Esc> <CR>
-
-" source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
-exec 'cd ' . fnameescape('C:\Users\abc0x7f\Desktop\Memories\PROGRAM')

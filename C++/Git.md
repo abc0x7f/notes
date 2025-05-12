@@ -171,3 +171,10 @@ git pull --rebase origin main
 git push origin main
 # 推送至远程仓库
 ```
+
+## 远程覆盖本地
+```bash
+git checkout dev # 切换至dev分支
+git fetch origin # 抓取远程仓库
+git reset --hard origin dev # 强制用远程对应仓库覆盖dev
+```
